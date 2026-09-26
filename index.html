@@ -12,7 +12,6 @@
 
     <title>Honey | Be With Honey</title>
 
-
     <style>
 
         /* ==============================
@@ -349,221 +348,6 @@
 
 
         /* ==============================
-           MESSAGE POPUP
-        ============================== */
-
-        .message-popup {
-
-            display: none;
-
-            position: fixed;
-
-            inset: 0;
-
-            background: rgba(0, 0, 0, 0.75);
-
-            justify-content: center;
-
-            align-items: center;
-
-            padding: 20px;
-
-            z-index: 9999;
-        }
-
-
-        .message-box {
-
-            position: relative;
-
-            width: 100%;
-
-            max-width: 450px;
-
-            background: #151515;
-
-            border: 1px solid #303030;
-
-            border-radius: 25px;
-
-            padding: 30px;
-
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5);
-
-            animation: popup 0.2s ease;
-        }
-
-
-        /* ==============================
-           POPUP ANIMATION
-        ============================== */
-
-        @keyframes popup {
-
-            from {
-
-                opacity: 0;
-
-                transform: scale(0.95);
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: scale(1);
-            }
-        }
-
-
-        /* ==============================
-           MESSAGE TITLE
-        ============================== */
-
-        .message-box h2 {
-
-            font-size: 25px;
-
-            margin-bottom: 8px;
-        }
-
-
-        .message-box p {
-
-            color: #858585;
-
-            font-size: 13px;
-
-            margin-bottom: 22px;
-        }
-
-
-        /* ==============================
-           INPUTS
-        ============================== */
-
-        .message-box input,
-        .message-box textarea {
-
-            width: 100%;
-
-            background: #222;
-
-            color: white;
-
-            border: 1px solid #333;
-
-            border-radius: 14px;
-
-            padding: 14px;
-
-            margin-bottom: 12px;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            outline: none;
-        }
-
-
-        .message-box input:focus,
-        .message-box textarea:focus {
-
-            border-color: #00bfff;
-        }
-
-
-        .message-box textarea {
-
-            resize: vertical;
-
-            min-height: 120px;
-        }
-
-
-        /* ==============================
-           CLOSE BUTTON
-        ============================== */
-
-        .close-message {
-
-            position: absolute;
-
-            top: 12px;
-
-            right: 17px;
-
-            background: none;
-
-            border: none;
-
-            color: #777;
-
-            font-size: 28px;
-
-            cursor: pointer;
-
-            transition: 0.2s;
-        }
-
-
-        .close-message:hover {
-
-            color: white;
-
-            transform: scale(1.1);
-        }
-
-
-        /* ==============================
-           SEND BUTTON
-        ============================== */
-
-        .send-button {
-
-            width: 100%;
-
-            padding: 14px;
-
-            border: none;
-
-            border-radius: 14px;
-
-            background: #292929;
-
-            color: white;
-
-            font-size: 15px;
-
-            font-weight: 600;
-
-            cursor: pointer;
-
-            transition:
-                background 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-
-        .send-button:hover {
-
-            background: #00bfff;
-
-            color: black;
-        }
-
-
-        .send-button:active {
-
-            transform: scale(0.97);
-        }
-
-
-        /* ==============================
            FOOTER
         ============================== */
 
@@ -668,20 +452,6 @@
                 font-size: 27px;
             }
 
-
-            .message-box {
-
-                padding: 25px 20px;
-
-                border-radius: 22px;
-            }
-
-
-            .message-box h2 {
-
-                font-size: 22px;
-            }
-
         }
 
     </style>
@@ -702,7 +472,7 @@
         <div class="profile">
 
             <img
-                src="profile.jpg"
+                src="babypic.jpg"
                 alt="Honey's profile picture"
             >
 
@@ -721,7 +491,7 @@
         ============================== -->
 
         <p class="subtitle">
-            Tap below to explore.
+          Personal content creator.
         </p>
 
 
@@ -840,129 +610,6 @@
             </a>
 
 
-            <!-- ==========================
-                 LEAVE A MESSAGE
-            =========================== -->
-
-            <div
-                class="link-card"
-                onclick="openMessage()"
-            >
-
-                <div class="icon">
-                    ✉
-                </div>
-
-
-                <div class="text">
-
-                    <div class="title">
-                        Leave a Message
-                    </div>
-
-                    <div class="username">
-                        Say something to Honey
-                    </div>
-
-                </div>
-
-
-                <div class="arrow">
-                    ›
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- ==============================
-             MESSAGE POPUP
-        ============================== -->
-
-        <div
-            id="messagePopup"
-            class="message-popup"
-        >
-
-            <div class="message-box">
-
-
-                <!-- CLOSE -->
-
-                <button
-                    class="close-message"
-                    onclick="closeMessage()"
-                    type="button"
-                >
-                    ×
-                </button>
-
-
-                <h2>
-                    Leave a Message
-                </h2>
-
-
-                <p>
-                    Send something nice to Honey ♡
-                </p>
-
-
-                <!-- ==========================
-                     FORMSPREE FORM
-                =========================== -->
-
-                <form
-                    action="https://formspree.io/f/xbglaplo"
-                    method="POST"
-                >
-
-                    <!-- NAME -->
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your name"
-                        maxlength="50"
-                        required
-                    >
-
-
-                    <!-- MESSAGE -->
-
-                    <textarea
-                        name="message"
-                        placeholder="Write your message..."
-                        maxlength="1000"
-                        required
-                    ></textarea>
-
-
-                    <!-- EMAIL SUBJECT -->
-
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="New message from Honey's website"
-                    >
-
-
-                    <!-- SEND -->
-
-                    <button
-                        type="submit"
-                        class="send-button"
-                    >
-                        Send Message
-                    </button>
-
-                </form>
-
-
-            </div>
-
         </div>
 
 
@@ -976,69 +623,6 @@
 
 
     </main>
-
-
-    <!-- ==============================
-         JAVASCRIPT
-    ============================== -->
-
-    <script>
-
-        function openMessage() {
-
-            document.getElementById(
-                "messagePopup"
-            ).style.display = "flex";
-
-        }
-
-
-        function closeMessage() {
-
-            document.getElementById(
-                "messagePopup"
-            ).style.display = "none";
-
-        }
-
-
-        /* Close when clicking outside the box */
-
-        document.getElementById(
-            "messagePopup"
-        ).addEventListener(
-            "click",
-            function(event) {
-
-                if (
-                    event.target ===
-                    document.getElementById("messagePopup")
-                ) {
-
-                    closeMessage();
-
-                }
-
-            }
-        );
-
-
-        /* Close with ESC */
-
-        document.addEventListener(
-            "keydown",
-            function(event) {
-
-                if (event.key === "Escape") {
-
-                    closeMessage();
-
-                }
-
-            }
-        );
-
-    </script>
 
 
 </body>
